@@ -1,0 +1,49 @@
+[workspace]
+name = "PoinTr_env"
+version = "0.1.0"
+channels = ["conda-forge"]
+platforms = ["linux-64"]
+preview = ["pixi-build"]
+
+[system-requirements]
+cuda = "12.4"
+
+[dependencies]
+python = "3.12.*"
+gcc = "*"
+pytorch-gpu = "2.*"
+torchvision = "*"
+cuda-toolkit = "12.4.*"
+cuda-version = "12.4.*"
+cuda-cudart-dev = "*"
+ninja = "*"
+
+numpy = "*"
+scipy = "*"
+matplotlib = "*"
+h5py = "*"
+pyyaml = "*"
+tqdm = "*"
+einops = "*"
+opencv = "*"
+transforms3d = "*"
+tensorboardx = "*"
+easydict = "*"
+timm = "*"
+open3d = "*"
+
+
+[activation]
+scripts = ["scripts/activate.sh"]
+
+[pypi-options]
+no-build-isolation = true
+
+[pypi-dependencies] 
+pointnet2 = {path="pkgs/Pointnet2_PyTorch"}
+knn_cuda = {path="pkgs/KNN_CUDA"}
+chamfer = {path="extensions/chamfer_dist"}
+cubic_feature_sampling = {path="extensions/cubic_feature_sampling"}
+emd = {path="extensions/emd"}
+gridding = {path="extensions/gridding"}
+gridding_distance = {path="extensions/gridding_loss"}
