@@ -40,8 +40,12 @@ scripts = ["scripts/activate.sh"]
 no-build-isolation = true
 
 [pypi-dependencies] 
-pointnet2 = {path="pkgs/Pointnet2_PyTorch"}
-knn_cuda = {path="pkgs/KNN_CUDA"}
+# pointnet2 = {path="pkgs/Pointnet2_PyTorch"}
+# knn_cuda = {path="pkgs/KNN_CUDA"}
+
+pointnet2 = {git="https://github.com/erikwijmans/Pointnet2_PyTorch.git", branch="master"}
+knn_cuda = {git="https://github.com/unlimblue/KNN_CUDA.git", branch="master"}
+
 chamfer = {path="extensions/chamfer_dist"}
 cubic_feature_sampling = {path="extensions/cubic_feature_sampling"}
 emd = {path="extensions/emd"}
